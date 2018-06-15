@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AlertController } from 'ionic-angular';
-import { Vibration } from '@ionic-native/vibration';
 import { AmbientesPage } from '../ambientes/ambientes';
 
 @IonicPage()
@@ -21,8 +20,7 @@ export class CadambientePage {
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private provider: AmbientesProvider,
-    private alertCtrl: AlertController,
-    private vibration: Vibration) {
+    private alertCtrl: AlertController) {
 
       this.ambiente = this.navParams.data.ambiente || { };
       this.createForm();

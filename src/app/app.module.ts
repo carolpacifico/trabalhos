@@ -19,7 +19,6 @@ import { AmbientesPage } from '../pages/ambientes/ambientes';
 import { SobrePage } from '../pages/sobre/sobre';
 import { IntroPage } from '../pages/intro/intro';
 
-import { Geolocation } from '@ionic-native/geolocation';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AmbientesProvider } from '../providers/ambientes/ambientes';
 import { Vibration } from '@ionic-native/vibration';

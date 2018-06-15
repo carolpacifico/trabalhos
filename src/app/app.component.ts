@@ -3,7 +3,6 @@ import { Platform, Nav, MenuController } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AmbientesPage } from '../pages/ambientes/ambientes';
-import { IntroPage } from '../pages/intro/intro';
 import { SobrePage } from '../pages/sobre/sobre';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SigninPage } from '../pages/signin/signin';

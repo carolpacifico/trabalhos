@@ -16,6 +16,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HomePage {
 
+  alertCtrl: any;
   ambientes: Observable<any>;
 
   constructor(
@@ -82,5 +83,15 @@ export class HomePage {
     .map(changes => {
       return changes.map(c => ({key: c.payload.key,...c.payload.val() }) );
     });
+  }
+
+  showPlatform() {
+    let text = 'I run on: ' + this.platform.platforms();
+    let alert = this.alertCtrl.create({
+      title: 'My Home',
+      subTitle: text,
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 }

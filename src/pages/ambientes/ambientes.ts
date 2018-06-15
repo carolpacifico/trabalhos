@@ -2,8 +2,7 @@ import { AmbientesProvider } from '../../providers/ambientes/ambientes';
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
-import { Vibration } from '@ionic-native/vibration';
-import { Platform, ActionSheetController } from 'ionic-angular';
+import { Platform} from 'ionic-angular';
 import { RelatorioPage } from '../relatorio/relatorio';
 
 
@@ -20,9 +19,7 @@ export class AmbientesPage {
     public navCtrl: NavController,
     private provider: AmbientesProvider,
     private alertCtrl: AlertController,
-    private vibration: Vibration,
-    public platform: Platform,
-    private actionsheetCtrl: ActionSheetController) {
+    public platform: Platform) {
 
     this.ambientes = this.provider.getAll();
   }

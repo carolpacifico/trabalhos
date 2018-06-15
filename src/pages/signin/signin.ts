@@ -62,9 +62,6 @@ export class SigninPage {
           toast.setMessage('O usuário não foi encontrado!');
         } else if(error.code == 'auth/wrong-password') {
           toast.setMessage('Senha ou usuário incorreto!');
-        }else if(error.code>=3){
-          toast.setMessage('Tente novamente em 1 minuto');
-          
         }
         toast.present();
       });
