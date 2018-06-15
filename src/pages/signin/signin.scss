@@ -1,0 +1,25 @@
+page-signin {
+    #logoLogin{
+        width: 100px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    div{
+        width: 100%;
+        align-items: center;
+    }
+}
+
+ion-content {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) !important;
+}
+
+.esqueceuSenha{
+    text-align: center !important;
+}
+
+#navLogo{
+    text-align: center !important;
+}

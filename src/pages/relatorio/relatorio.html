@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar color="danger">
+      <ion-title>
+        Estado do Ambiente
+      </ion-title>
+  
+      <ion-buttons end padding-right>
+        <a padding-right (click)="paraAmbiente(ambiente)">
+          <ion-icon color="light" name="create"></ion-icon>
+        </a>
+        <a padding-right (click)="showConfirm(ambiente.key)">
+          <ion-icon color="light" name="trash"></ion-icon>
+        </a>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content >
+  
+  <div id="nome" >
+  
+      <h1 id="texto" padding-left >{{ ambiente.nome }}</h1>
+ 
+  </div>
+  
+    <ion-item>
+
+        <div>
+            <ion-icon item-start color="cinza" name="map"  ></ion-icon>
+          Largura (cm):  {{ ambiente.largura }} 
+        </div>
+
+      <div>
+        <ion-icon item-start color="cinza" name="clipboard"></ion-icon>
+        Comprimento (cm): {{ ambiente.comprimento }}
+      </div>
+      <div>
+          <ion-icon item-start color="cinza" name="map"  ></ion-icon>
+        Profundidade (cm):  {{ ambiente.profundidade }} 
+      </div>
+      <div>
+          <img src="assets/imgs/logo.png" alt="">
+      </div>
+  
+    </ion-item>
+  </ion-content>

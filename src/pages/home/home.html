@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Menu</ion-title>
+
+    <ion-buttons end padding-right>
+      <a (click)="openMenu()">
+          <ion-icon name="md-more" color="light"></ion-icon>
+      </a>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+      <ion-item item-start>
+        <img id="icone" src="assets/imgs/grafico.png" item-start alt=""> 
+        <p>Ambientes Cadastrados</p>
+      </ion-item>
+  
+  
+      <ion-list>
+        <ion-item-sliding *ngFor="let ambiente of ambientes | async" (click)="presentModalAmbiente(ambiente)">
+          <ion-item>
+            <h2>{{ ambiente.nome }}</h2>
+            
+          </ion-item>
+
+        </ion-item-sliding>
+      </ion-list>
+  
+      <button ion-button (click)="mostrarMaisAmbientes()" block clear color="cinza" item-start>
+        <ion-icon padding-right color="cinza" name="arrow-round-forward"></ion-icon>
+        Relatório Completo
+      </button>
+  
+    </ion-card>
+
+    <ion-fab right bottom>
+        <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="top">
+          <button (click)='cadastrarAmbiente()' color="primary" ion-fab>
+              <img id="botao"  src="assets/imgs/ambiente.png" item-start alt="">
+          </button>
+        </ion-fab-list>
+      </ion-fab>
+
+</ion-content>

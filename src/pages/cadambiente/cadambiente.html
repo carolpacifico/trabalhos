@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color='danger'>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+    <form [formGroup]="form">
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" formControlName="nome"></ion-input>
+        </ion-item>
+        
+        <ion-item *ngIf="!form.controls.nome.valid && (form.controls.nome.dirty || form.controls.nome.touched)" class="text-danger">
+          <div [hidden]="!form.controls.nome.errors.required">
+            O campo é obrigatório
+          </div>
+        </ion-item>
+
+  
+        <ion-item>
+            <ion-label stacked>Largura (cm)</ion-label>
+            <ion-input type="number" formControlName="largura"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!form.controls.largura.valid && (form.controls.largura.dirty || form.controls.largura.touched)" class="text-danger">
+            <div [hidden]="!form.controls.largura.errors.required">
+              O campo é obrigatório
+            </div>
+          </ion-item>
+
+          <ion-item>
+              <ion-label stacked>Comprimento (cm)</ion-label>
+              <ion-input type="number" formControlName="comprimento"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!form.controls.comprimento.valid && (form.controls.comprimento.dirty || form.controls.comprimento.touched)" class="text-danger">
+              <div [hidden]="!form.controls.comprimento.errors.required">
+                O campo é obrigatório
+              </div>
+            </ion-item>
+
+            <ion-item>
+              <ion-label stacked>Profundidade (cm)</ion-label>
+              <ion-input type="number" formControlName="profundidade"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!form.controls.profundidade.valid && (form.controls.profundidade.dirty || form.controls.profundidade.touched)" class="text-danger">
+              <div [hidden]="!form.controls.profundidade.errors.required">
+                O campo é obrigatório
+              </div>
+            </ion-item>
+          
+
+        <div padding>
+          <button ion-button block color="danger" type="submit" [disabled]="!form.valid" (click)="onSubmit()">Cadastrar</button>
+        </div>
+    </form>
+</ion-content>

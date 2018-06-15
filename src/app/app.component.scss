@@ -1,0 +1,25 @@
+myapp{
+   
+    .cabecalho-menu {
+        height: 25vh;
+
+        padding: 0;
+            margin: 0;
+            background-image: url("assets/imgs/logo.png");
+            background-size: 100% 100%;
+
+
+            #logo{
+                background-size: 100% 100%;
+                width: 80%;
+                background-position: center;
+            }
+        
+
+  
+    }
+    #icone-menu {
+        height: 36px;
+        width: 36px;
+    }
+}

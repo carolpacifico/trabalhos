@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color='danger'>
+      <ion-title>Ambientes Cadastrados</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content>
+    
+    <ion-list>
+      <ion-item-sliding *ngFor="let ambiente of ambientes | async" (click)="presentModal(ambiente)" >
+        <ion-item>
+          <h2>{{ ambiente.nome }}</h2>
+        </ion-item>
+  
+      </ion-item-sliding>
+    </ion-list>
+  
+    <ion-fab bottom right>
+      <button ion-fab color="danger" (click)="irParaCadastro()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-content>
+  
